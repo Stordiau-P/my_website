@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "themselves",
+				"type": "Text"
+			},
+			"repeatable_zone": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pine",
+									"type": "Text"
+								}
+							],
+							[
+								"time_period",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "foreign",
+									"type": "Text"
+								}
+							],
+							[
+								"institution",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "bare",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ut amet veniam fugiat in sit elit irure mollit sit est ut deserunt nostrud exercitation sunt. Minim laborum qui irure nostrud ea do voluptate veniam."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

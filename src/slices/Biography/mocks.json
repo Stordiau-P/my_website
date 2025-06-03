@@ -1,0 +1,61 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "clay",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum ea velit eiusmod pariatur ut quis Lorem esse esse incididunt laboris reprehenderit aliqua. Pariatur reprehenderit tempor esse eiusmod reprehenderit ex. Consequat tempor tempor voluptate ex do ex fugiat tempor reprehenderit enim nisi tempor et esse dolor."
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "sum",
+				"type": "Text"
+			},
+			"button_link": {
+				"key": "7e9e989a-e27b-4219-8260-4c9f6ce3f085",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "think"
+				}
+			},
+			"avatar": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+					"width": 4272,
+					"height": 2848
+				},
+				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+				"width": 4272,
+				"height": 2848,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "traffic",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
