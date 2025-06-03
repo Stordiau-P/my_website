@@ -94,8 +94,8 @@ export default function ContentList({items, contentType, fallbackItemImage, view
 
         return asImageSrc(image, {
             fit: "crop",
-            w: 220,
-            h: 320,
+            w: 320,
+            h: 220,
             exp: -10
         })
     })
@@ -147,7 +147,7 @@ export default function ContentList({items, contentType, fallbackItemImage, view
                 ))}
             </ul>
             {/*Hover Element*/}
-        <div className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300" style={{
+        <div className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[220px] w-[320px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300" style={{
             backgroundImage: currentItem !== null ? `url(${contentImages[currentItem]})` : "",
         }}
         ref={revealRef}
