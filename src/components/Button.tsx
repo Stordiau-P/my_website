@@ -1,11 +1,11 @@
 import {PrismicNextLink} from "@prismicio/next";
 import clsx from "clsx";
 import { GrDownload } from "react-icons/gr";
-import {LinkField} from "@prismicio/client";
+import {KeyTextField, LinkField} from "@prismicio/client";
 
 type ButtonProps = {
     linkField: LinkField;
-    label: keyTextField;
+    label: KeyTextField;
     showIcon?: boolean;
     className?: string;
 }

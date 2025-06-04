@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 type ContentListProps = {
     items: Content.BlogPostDocument[] | Content.ProjectDocument[];
     contentType: Content.ContentIndexSlice["primary"]["content_type"];
-    fallbackItemImage: Content.ContentIndexSlice["primary"]["fall_back_item_image"];
+    fallbackItemImage: Content.ContentIndexSlice["primary"]["fallback_item_image"];
     viewMoreText: Content.ContentIndexSlice["primary"]["view_more_text"];
 
 }
@@ -29,7 +29,7 @@ export default function ContentList({items, contentType, fallbackItemImage, view
 
     useEffect(()=>{
         let ctx = gsap.context(() => {
-            itemsRef.current.forEach((item, index)=>{
+            itemsRef.current.forEach((item)=>{
                 gsap.fromTo(item,
                     {opacity:0, y:20},
                     {
@@ -46,7 +46,7 @@ export default function ContentList({items, contentType, fallbackItemImage, view
                     }
 
 
-                    )
+                )
             })
             return ()=> ctx.revert()
         }, component)
@@ -60,7 +60,7 @@ export default function ContentList({items, contentType, fallbackItemImage, view
             // Calculate speed and direction
             const speed = Math.sqrt(Math.pow(mousePos.x - lastMousePos.current.x, 2))
 
-            let ctx = gsap.context(()=>{
+            const ctx = gsap.context(()=>{
                 if (currentItem !== null) {
                     const maxY = window.scrollY + window.innerHeight - 350
                     const maxX = window.innerWidth - 250
@@ -122,38 +122,38 @@ export default function ContentList({items, contentType, fallbackItemImage, view
                     <>
                         {isFilled.keyText(item.data.title) && (
 
-                <li key={index} className="list-item opacity-0"
-                onMouseEnter={()=> onMouseEnter(index)}
-                ref={(el)=>(itemsRef.current[index] = el)}
-                >
-                    <Link
-                        href={urlPrefix + "/" + item.uid}
-                        className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
-                        aria-label={item.data.title}
-                    >
-                    <div className="flex flex-col">
-                        <span className="font-bold text-3xl">{item.data.title}</span>
-                        <div className="flex gap-3 text-yellow-400 text-lg font-bold">
-                            {item.tags.map((tag, index)=>(
-                                <span key={index}>{tag}</span>
-                            ))}
-                        </div>
-                    </div>
-                    <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">{viewMoreText} <MdArrowOutward/></span>
-                </Link>
-                </li>
+                            <li key={index} className="list-item opacity-0"
+                                onMouseEnter={()=> onMouseEnter(index)}
+                                ref={(el) => { itemsRef.current[index] = el }}
+                            >
+                                <Link
+                                    href={urlPrefix + "/" + item.uid}
+                                    className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
+                                    aria-label={item.data.title}
+                                >
+                                    <div className="flex flex-col">
+                                        <span className="font-bold text-3xl">{item.data.title}</span>
+                                        <div className="flex gap-3 text-yellow-400 text-lg font-bold">
+                                            {item.tags.map((tag, index)=>(
+                                                <span key={index}>{tag}</span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">{viewMoreText} <MdArrowOutward/></span>
+                                </Link>
+                            </li>
                         )}
                     </>
                 ))}
             </ul>
             {/*Hover Element*/}
-        <div className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[220px] w-[320px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300" style={{
-            backgroundImage: currentItem !== null ? `url(${contentImages[currentItem]})` : "",
-        }}
-        ref={revealRef}
-        >
+            <div className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[220px] w-[320px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300" style={{
+                backgroundImage: currentItem !== null ? `url(${contentImages[currentItem]})` : "",
+            }}
+                 ref={revealRef}
+            >
 
-        </div>
+            </div>
 
         </div>
     )

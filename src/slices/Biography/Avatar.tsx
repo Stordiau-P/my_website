@@ -28,11 +28,11 @@ export default function Avatar({ image, className }:AvatarProps){
                 const componentRect = (component.current as HTMLElement).getBoundingClientRect()
                 const componentCenterX = componentRect.left + componentRect.width / 2
 
-                let componentPercent = {
+                const componentPercent = {
                     x: (e.clientX - componentCenterX) / componentRect.width / 2
                 }
 
-                let distFromCenter = 1 - Math.abs(componentPercent.x)
+                const distFromCenter = 1 - Math.abs(componentPercent.x)
 
                 gsap.timeline({
                     defaults: {duration: .5, overwrite: "auto", ease: "power3.Out"}
