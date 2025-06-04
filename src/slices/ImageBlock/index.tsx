@@ -13,7 +13,7 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 const ImageBlock: FC<ImageBlockProps> = ({ slice }) => {
   return (
       <div className="flex justify-center items-center">
-   <PrismicNextImage field={slice.primary.image} className=" flex max-w-250 rounded-lg items-center justify-center"/>
+   <PrismicNextImage field={slice.primary.image} className=" flex not-prose w-full h-full my-10 md:my-14 lg:my-16 rounded-lg items-center justify-center"/>
       </div>
   );
 };
