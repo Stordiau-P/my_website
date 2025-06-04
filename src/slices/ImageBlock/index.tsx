@@ -5,6 +5,7 @@ import {PrismicNextImage} from "@prismicio/next";
 /**
  * Props for `ImageBlock`.
  */
+
 export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 
 /**
